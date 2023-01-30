@@ -1,0 +1,9 @@
+# server:
+#   ssl:
+#     key-alias: tls-self-cert
+#     key-store-type: AzureKeyVault
+#     trust-store-type: AzureKeyVault
+#   port: 8443
+# azure:
+#   keyvault:
+#     uri: https://kv-hcmqdlhasrbaver-dev.vault.azure.net/

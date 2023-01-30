@@ -1,0 +1,7 @@
+az spring app deploy \
+    --name "app-bluegreener" \
+    --resource-group "rg-bluegreener-dev" \
+    --service "asa-bluegreener-dev" \
+    --artifact-path "sampleapi/target/sampleapi-0.0.1-SNAPSHOT.jar" \
+    --runtime-version Java_17 \
+    --deployment "staging"

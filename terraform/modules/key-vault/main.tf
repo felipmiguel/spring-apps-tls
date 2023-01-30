@@ -8,7 +8,7 @@ terraform {
 }
 
 resource "azurecaf_name" "key_vault" {
-  random_length = "15"
+  random_length = "14"
   resource_type = "azurerm_key_vault"
   suffixes      = [var.environment]
 }
@@ -40,7 +40,8 @@ resource "azurerm_key_vault_access_policy" "client" {
     "Set",
     "Get",
     "List",
-    "Delete"
+    "Delete",
+    "Purge"
   ]
 
   certificate_permissions = [
@@ -49,7 +50,9 @@ resource "azurerm_key_vault_access_policy" "client" {
     "Create",
     "Delete", 
     "Restore",
-    "Update"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    "Update",     
+    "Purge",
+    "Recover"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
   ]
 }
 
